@@ -17,11 +17,11 @@ function PolicyCard({ policy }: PolicyCardProps) {
         </h2>
       </div>
       <div className='flex justify-between gap-10'>
-        <div className='flex-1 border border-dashed p-4'>
+        <div className='flex-1 p-2'>
           <div className='grid grid-cols-2 gap-10'>
     
             {/* Left Column */}
-            <div>
+            <div className='pr-8 border-r border-gray-300'>
 
               <div className="mb-4">
                 <span className="font-bold">
@@ -86,9 +86,69 @@ function PolicyCard({ policy }: PolicyCardProps) {
               </div>
             </div>
           </div>
+
+          {/* footer for links */}
+
+          <div className="mt-6 flex gap-6">
+            <a
+              href="#"
+              className="
+                underline
+                focus:outline
+                focus:outline-2
+                focus:outline-blue-500
+              "
+            >
+              View PDS
+            </a>
+
+            <a
+              href="#"
+              className="
+                underline
+                focus:outline
+                focus:outline-2
+                focus:outline-blue-500
+              "
+            >
+              Certificate of Insurance
+            </a>
+          </div>
+
         </div>
-        <div className='w-64 border border-dashed p-4'>
-          Buttons Area
+        
+        {/* Buttons Area */}
+
+        <div className='w-64 p-4'>
+          <button
+            type='button'
+            className='w-full px-6 py-3 rounded-full border-2 border-blue-700 bg-yellow-300 text-blue-700 text-center font-medium focus:outline focus:outline-2 focus:outline-blue-500'
+            onClick={()  => {}}
+          >
+            Make a claim
+          </button>
+          <button
+            type="button"
+            className="
+              w-full
+              mt-4
+              px-6
+              py-3
+              rounded-full
+              border-2
+              border-blue-700
+              bg-white
+              text-center
+              text-blue-700
+              font-medium
+              focus:outline
+              focus:outline-2
+              focus:outline-blue-500
+            "
+            onClick={() => {}}
+          >
+            Manage my policy
+          </button>
         </div>
       </div>
     </div>
