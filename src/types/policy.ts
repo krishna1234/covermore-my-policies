@@ -8,7 +8,7 @@ export interface Policy {
   policyStart: string;
   policyEnd: string;
   primaryTravellerFirstname: string;
-  primaryTravellerLastname: string;
+  primaryTravellerLastName: string;
   primaryTravellerPhoneNumber: string;
   status: string;
   alphaCode: string;
