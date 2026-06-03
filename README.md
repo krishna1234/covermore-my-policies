@@ -3,6 +3,11 @@
 A simple React application that displays policy data in a paginated card/table layout. Built as part of a frontend coding task.
 
 ---
+## Live/Deployed URL (Vercel)
+
+https://covermore-my-policies-a9e2.vercel.app/
+
+---
 
 ## 🚀 Features
 
@@ -18,6 +23,6 @@ A simple React application that displays policy data in a paginated card/table l
 
 - React (Vite / CRA depending on setup)
 - JavaScript (ES6+)
-- CSS / Tailwind / Bootstrap (based on your implementation)
+- Tailwind
 
 ---
