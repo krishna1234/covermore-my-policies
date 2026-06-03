@@ -28,7 +28,7 @@ function PolicyCard({ policy }: PolicyCardProps) {
                   Destination:
                 </span>{" "}
                 <span>
-                  {policy.destinations[0]?.name}
+                  {policy.destinations?.[0]?.name}
                 </span>
               </div>
 
