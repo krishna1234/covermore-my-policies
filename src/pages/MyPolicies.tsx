@@ -55,12 +55,12 @@ function MyPolicies() {
             type="button" 
             disabled={currentPage === 1} 
             onClick={() => setCurrentPage(currentPage - 1)} 
-            className="px-3 py-2 w-10 h-10 border rounded-full disabled:opacity:50 disabled:cursor-not-allowed">
+            className="px-3 py-2 w-10 h-10 border rounded-full disabled:opacity:50 cursor-pointer disabled:cursor-not-allowed">
             {" < "}
           </button>
           {pageNumbers.map((page) => {
             return(
-              <button key={page} type="button" onClick={() => setCurrentPage(page)} className={`w-10 h-10 rounded-full border ${currentPage === page ? "bg-blue-700 text-white" : "bg-white"} mx-1 focus:outline focus:outline-2 focus:outline-blue-500`}>
+              <button key={page} type="button" onClick={() => setCurrentPage(page)} className={`w-10 h-10 rounded-full border ${currentPage === page ? "bg-blue-700 text-white" : "bg-white"} cursor-pointer mx-1 focus:outline focus:outline-2 focus:outline-blue-500`}>
                 {page}
               </button>
             )
@@ -75,6 +75,7 @@ function MyPolicies() {
                 w-10 h-10
                 border
                 rounded-full
+                cursor-pointer
                 disabled:opacity-50
                 disabled:cursor-not-allowed
               "
