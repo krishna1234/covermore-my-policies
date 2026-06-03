@@ -1,7 +1,9 @@
 import './App.css'
+import type { Policy } from './types/policy';
 
-function App() {  
+const testPolicy: Policy | null = null
 
+function App() {    
   return (
     <div className='p-10'>
       CoverMore Policies
