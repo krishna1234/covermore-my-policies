@@ -19,4 +19,5 @@ export interface Policy {
   excess: number;
   maxTripDuration: number;
   planName: string;
+  destinations?: Destination[];
 }

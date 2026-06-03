@@ -3,7 +3,9 @@ import MyPolicies from './pages/MyPolicies'
 
 function App() {    
   return (
-    <MyPolicies />
+    <div className='bg-gray-200'>
+      <MyPolicies />
+    </div>
   )
 }
 
