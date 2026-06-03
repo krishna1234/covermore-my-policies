@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { fetchPolicies } from "../api/policyApi";
 import type { Policy } from "../types/policy";  
+import { getActivePolicies, sortPoliciesByStartDate } from "../utils/policyHelpers";
 
 function MyPolicies() {
   const [policies, setPolicies] = useState<Policy[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const activePolicies = getActivePolicies(policies);
+  const sortedPolicies = sortPoliciesByStartDate(activePolicies);
 
   useEffect(() => {
     const loadPolicies = async () => {
@@ -22,7 +26,14 @@ function MyPolicies() {
 
   return(
     <div className="p-8">
-      Total Policies: {policies.length}
+      Total Policies: {sortedPolicies.length}
+      <>
+        {sortedPolicies.map((policy) => {
+          return <div key={policy.policyNumber}>
+            {policy.policyStart}
+          </div>
+        })}
+      </>
     </div>  
   )
 }
