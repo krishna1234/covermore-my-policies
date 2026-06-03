@@ -9,19 +9,19 @@ function PolicyCard({ policy }: PolicyCardProps) {
   return (
     <div className='bg-white rounded-2xl p-8 mb-8'>
       <div className='mb-6'>
-        <h2 className='text-2xl'>
-          <span className='font-bold text-blue-700'>
+        <h2 className='text-xl lg:text-2xl'>
+          <span className='block font-bold text-blue-700 lg:inline'>
             Policy Number: 
-          </span>&nbsp;&nbsp;
-          {policy.policyNumber}
+          </span>
+          <span className='block lg:inline lg:ml-2'>{policy.policyNumber}</span>          
         </h2>
       </div>
-      <div className='flex justify-between gap-10'>
+      <div className='flex flex-col lg:flex-row gap-10'>
         <div className='flex-1 p-2'>
-          <div className='grid grid-cols-2 gap-10'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-10'>
     
             {/* Left Column */}
-            <div className='pr-8 border-r border-gray-300'>
+            <div className='lg:pr-8 lg:border-r lg:border-gray-300'>
 
               <div className="mb-4">
                 <span className="font-bold">
@@ -89,7 +89,7 @@ function PolicyCard({ policy }: PolicyCardProps) {
 
           {/* footer for links */}
 
-          <div className="mt-6 flex gap-6">
+          <div className="lg:mt-6 flex gap-6">
             <a
               href="#"
               className="
@@ -119,10 +119,10 @@ function PolicyCard({ policy }: PolicyCardProps) {
         
         {/* Buttons Area */}
 
-        <div className='w-64 p-4'>
+        <div className='w-full lg:w-64 flex flex-col gap-4'>
           <button
             type='button'
-            className='w-full px-6 py-3 rounded-full border-2 border-blue-700 bg-yellow-300 text-blue-700 text-center font-medium focus:outline focus:outline-2 focus:outline-blue-500'
+            className='w-full px-6 py-3 rounded-full border-2 border-blue-700 bg-yellow-300 text-blue-700 text-center font-medium focus:outline focus:outline-2 focus:outline-blue-500 cursor-pointer'
             onClick={()  => {}}
           >
             Make a claim
@@ -144,6 +144,7 @@ function PolicyCard({ policy }: PolicyCardProps) {
               focus:outline
               focus:outline-2
               focus:outline-blue-500
+              cursor-pointer
             "
             onClick={() => {}}
           >

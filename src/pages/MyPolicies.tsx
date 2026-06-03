@@ -26,8 +26,7 @@ function MyPolicies() {
   }
 
   return(
-    <div className="max-w-6xl mx-auto p-8">
-      My Policies: ({sortedPolicies.length})
+    <div className="max-w-6xl mx-auto p-8">      
       <>
         {sortedPolicies.map((policy) => {
           return <PolicyCard 
